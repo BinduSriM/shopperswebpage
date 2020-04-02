@@ -10,15 +10,16 @@
       var ele=document.form1.mail.value;
       var atposition=ele.indexOf("@");  
       var dotposition=ele.lastIndexOf(".");  
-      if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+      if (atposition<1 || dotposition<atposition+2 || dotposition+2>=ele.length){  
          document.getElementById('errorname').innerHTML="Please provide a valid email";
          document.getElementById('errorname').style.color="#ff0000";
-         document.getElementById('errorname').style.font="14px myFirstFont";
+         document.getElementById('errorname').style.font="16px myFirstFont";
          document.getElementById('errorname').style.padding="8px 0 0 25px"; 
          document.getElementById('em').style.borderColor="#FF0000";
          document.getElementById('img2').src="icon-error.svg";
           return false;  
       } 
+      alert("Yayyy!!! You have successfully subscribed.");
       return true;
     }
   </script>
