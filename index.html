@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Challenge-1</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css'><link rel="stylesheet" href="style.css">
+  <script type="text/javascript">
+    function valid(){
+      var ele=document.form1.mail.value;
+      var atposition=ele.indexOf("@");  
+      var dotposition=ele.lastIndexOf(".");  
+      if (atposition<1 || dotposition<atposition+2 || dotposition+2>=ele.length){  
+         document.getElementById('errorname').innerHTML="Please provide a valid email";
+         document.getElementById('errorname').style.color="#ff0000";
+         document.getElementById('errorname').style.font="16px myFirstFont";
+         document.getElementById('errorname').style.padding="8px 0 0 25px"; 
+         document.getElementById('em').style.borderColor="#FF0000";
+         document.getElementById('img2').src="icon-error.svg";
+          return false;  
+      } 
+
+      alert("Yayyy!!! You have successfully subscribed.");
+      return true;
+    }
+  </script>
+</head>
+<body>
+<div class="container" id="container">
+  <div class="form-container sign-in-container">
+    <div class="topleft">
+      <img src="logo.svg" id="img1">
+    </div>
+    <div class="overlay-container">
+    <div>
+      <img id="img">
+    </div>
+    </div>
+    <form name="form1" action="">
+      <h1></h1>
+      <h1 style="color:#b10101; margin-top: 50px;">WE'RE</h1>
+      <h1>COMING</h1>
+      <h1>SOON</h1>
+      <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <span style="display:inline-flex;">
+        <img id="img2">
+        <input type="text" placeholder="Email Address" size="70" name="mail" id="em">
+        <button onclick="return valid()"><i class="fas fa-chevron-right"></i></button>
+    </span>
+    <span id="errorname"></span>
+    </form>
+  </div>
+</div>
+</body>
+</html>
